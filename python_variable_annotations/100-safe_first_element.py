@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def safe_first_element(lst : list):
     if lst:
         return lst[0]

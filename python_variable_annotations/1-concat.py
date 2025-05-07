@@ -1,2 +1,5 @@
+#!/usr/bin/env python3
+
 def concat (str1 : str, str2 : str):
-    return str1+str2
+    string : str = str1+str2
+    return string
