@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
+"""This module provides a function to create a multiplier function."""
 
-def make_multiplier (multiplier : float):
-    def multiply(n : float):
-        return n * multiplier
+from typing import Callable
+
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
+    """Return a function that multiplies a float by the given multiplier."""
+    def multiply(value: float) -> float:
+        return value * multiplier
     return multiply

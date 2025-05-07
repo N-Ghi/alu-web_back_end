@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+"""This module provides a function to zoom an array by a specified factor."""
 
-from typing import Tuple
+from typing import List, Any
 
-def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
-    zoomed_in: Tuple = [
+def zoom_array(lst: List[Any], factor: int = 2) -> List[Any]:
+    """Return a list that repeats each element of lst factor times."""
+    zoomed_in: List[Any] = [
         item for item in lst
         for i in range(factor)
     ]
@@ -14,4 +16,4 @@ array = [12, 72, 91]
 
 zoom_2x = zoom_array(array)
 
-zoom_3x = zoom_array(array, 3.0)
+zoom_3x = zoom_array(array, 3)
