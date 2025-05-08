@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""This module provides a function to zoom an array by a specified factor."""
+"""Function to zoom an array by a specified factor."""
 
 from typing import List, Any, Tuple
+
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """Return a list that repeats each element of lst factor times."""
