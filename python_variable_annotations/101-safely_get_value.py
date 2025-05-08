@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Safely get a value from a dictionary."""
 
-from typing import TypeVar, Optional, Mapping, Any
+from typing import TypeVar, Optional, Mapping, Any, Union
 
 
 T = TypeVar('T')
