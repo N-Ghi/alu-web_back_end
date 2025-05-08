@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Async comprehension module.
-Collects 10 random numbers from an async 
+Collects 10 random numbers from an async
 generator and returns them as a list.
 """
 
