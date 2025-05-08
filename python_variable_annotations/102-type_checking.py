@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Function to zoom an array by a specified factor."""
 
-from typing import List, Any, Tuple
+from typing import List, Any, Sequence
 
 
-def zoom_array(lst: Tuple, factor: int = 2) -> List:
+def zoom_array(lst: Sequence[Any], factor: int = 2) -> List:
     """Return a list that repeats each element of lst factor times."""
     zoomed_in: List[Any] = [
         item for item in lst
