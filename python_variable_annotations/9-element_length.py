@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Return a list of tuples with elements and their lengths."""
 
-from typing import List, Tuple
+from typing import Iterable, Sequence, Tuple, List
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
-    """Return a list of tuples where each tuple contains a string and its length."""
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """Each tuple contains a sequence and its length."""
     return [(i, len(i)) for i in lst]
