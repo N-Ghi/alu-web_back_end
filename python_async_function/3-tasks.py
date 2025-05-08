@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module that provides a function returning an asyncio Task for wait_random."""
+"""Function returning an asyncio Task for wait_random."""
 
 import asyncio
 
