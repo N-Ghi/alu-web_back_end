@@ -5,8 +5,8 @@ from typing import List, Any, Tuple
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
-    """Return a list that repeats each element of lst factor times."""
-    zoomed_in: List[Any] = [
+    """Return a tuple that repeats each element of lst factor times."""
+    zoomed_in: Tuple[Any] = [
         item for item in lst
         for i in range(factor)
     ]
