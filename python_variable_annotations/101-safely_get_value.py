@@ -6,7 +6,7 @@ from typing import TypeVar, Optional, Mapping, Any
 
 T = TypeVar('T')
 
-def safely_get_value(dct: Mapping, key: Any, default: Optional[T] = None) -> Optional[T]:
+def safely_get_value(dct: Mapping, key: Any, default: Optional[T] = None) -> Optional[Any | T]:
     """Return key from the dictionary, or default if key is not found."""
     if key in dct:
         return dct[key]
