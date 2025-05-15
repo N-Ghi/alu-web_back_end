@@ -40,9 +40,10 @@ class Server:
         """
         Simple documentation to pass the checker for now
         """
+        pSize = page_size
         # Validate that arguments are integers and greater than 0
         assert isinstance(page, int) and page > 0, "page must be positive"
-        assert isinstance(page_size, int) and page_size > 0, "page_size must be positive"
+        assert isinstance(pSize, int) and pSize > 0, "page_size must be positive"
 
         # Get the dataset
         dataset = self.dataset()
