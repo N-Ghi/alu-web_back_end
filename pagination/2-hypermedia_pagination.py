@@ -41,14 +41,15 @@ class Server:
         Simple documentation to pass the checker for now
         """
         # Validate that arguments are integers and greater than 0
+        pSize = page_size
         assert isinstance(page, int) and page > 0, "page must be positive"
-        assert isinstance(page_size, int) and page_size > 0, "page_size must be positive"
+        assert isinstance(pSize, int) and pSize > 0, "pSize must be positive"
 
         # Get the dataset
         dataset = self.dataset()
 
         # Get the pagination indexes
-        start_idx, end_idx = index_range(page, page_size)
+        start_idx, end_idx = index_range(page, pSize)
 
         # If start index is beyond the dataset size, return empty list
         if start_idx >= len(dataset):
@@ -62,13 +63,14 @@ class Server:
         Simple documentation to pass the checker for now
         """
         # Get the page data using the get_page method
-        data = self.get_page(page, page_size)
+        pSize = page_size
+        data = self.get_page(page, pSize)
 
         # Calculate total items in the dataset
         total_items = len(self.dataset())
 
         # Calculate total pages
-        total_pages = math.ceil(total_items / page_size) if page_size > 0 else 0
+        total_pages = math.ceil(total_items / pSize) if pSize > 0 else 0
 
         # Determine next page
         next_page = page + 1 if page < total_pages else None
@@ -77,6 +79,7 @@ class Server:
         prev_page = page - 1 if page > 1 else None
 
         # Create the dictionary with all required key-value pairs
+        page_size = pSize
         hyper_dict = {
             'page_size': len(data),
             'page': page,
