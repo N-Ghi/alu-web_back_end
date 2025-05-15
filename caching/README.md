@@ -1,3 +1,0 @@
-# Fourth Intranet Activity
-
-Caching
