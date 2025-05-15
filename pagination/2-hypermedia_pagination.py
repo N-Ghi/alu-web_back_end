@@ -8,6 +8,9 @@ from typing import List, Dict, Any
 
 
 def index_range(page, page_size):
+    """
+    Simple helper function for pagination documentation
+    """
     start_index = (page - 1) * page_size
     end_index = page * page_size
 
@@ -35,8 +38,8 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         # Validate that arguments are integers and greater than 0
-        assert isinstance(page, int) and page > 0, "page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0, "page_size must be a positive integer"
+        assert isinstance(page, int) and page > 0, "page must be positive"
+        assert isinstance(page_size, int) and page_size > 0, "page_size must be positive"
 
         # Get the dataset
         dataset = self.dataset()
@@ -50,7 +53,7 @@ class Server:
 
         # Return the appropriate page of the dataset
         return dataset[start_idx:end_idx]
-    
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
         # Get the page data using the get_page method
         data = self.get_page(page, page_size)
@@ -59,7 +62,7 @@ class Server:
         total_items = len(self.dataset())
 
         # Calculate total pages
-        total_pages = math.ceil(total_items / page_size) if page_size > 0 else 0
+        total_pages = math.ceil(total_items / page_size) if page_size> 0 else 0
 
         # Determine next page
         next_page = page + 1 if page < total_pages else None

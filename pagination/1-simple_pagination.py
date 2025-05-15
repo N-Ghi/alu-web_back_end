@@ -8,6 +8,9 @@ from typing import List
 
 
 def index_range(page, page_size):
+    """
+    Simple helper function for pagination documentation
+    """
     start_index = (page - 1) * page_size
     end_index = page * page_size
 
@@ -35,8 +38,8 @@ class Server:
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         # Validate that arguments are integers and greater than 0
-        assert isinstance(page, int) and page > 0, "page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0, "page_size must be a positive integer"
+        assert isinstance(page, int) and page > 0,"page must be positive"
+        assert isinstance(page_size, int) and page_size > 0, "page_size must be positive"
 
         # Get the dataset
         dataset = self.dataset()
