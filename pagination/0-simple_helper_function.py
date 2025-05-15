@@ -5,6 +5,7 @@ Simple helper function for pagination
 
 
 def index_range(page, page_size):
+    # Function Documentation here
     start_index = (page - 1) * page_size
     end_index = page * page_size
 
