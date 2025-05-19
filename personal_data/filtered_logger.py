@@ -17,7 +17,7 @@ def filter_datum(
     Obfuscate specified fields in a log message.
     """
     pattern = ''.join(
-        [f'({re.escape(field)}=)[^{re.escape(separator)}]*({re.escape(separator)})'
-        for field in fields]
+        [f'({re.escape(field)}=)[^{re.escape(separator)}]*
+            ({re.escape(separator)})' for field in fields]
     )
     return re.sub(pattern, rf'\1{redaction}\2', message)
