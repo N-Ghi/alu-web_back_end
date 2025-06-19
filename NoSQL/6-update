@@ -1,1 +1,12 @@
 #!/usr/bin/env python3
+// Update
+db.school.update(
+    { name: "ALX" },
+    {$set: {
+            address: "972 Mission street"
+        }
+    },
+    {
+        multi: true
+    }
+)

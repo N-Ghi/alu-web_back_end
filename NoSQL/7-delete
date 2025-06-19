@@ -1,1 +1,5 @@
 #!/usr/bin/env python3
+// Delete by match
+db.school.deleteMany(
+    { name: "ALX" }
+)
