@@ -9,7 +9,9 @@ from pymongo import MongoClient
 
 
 def main():
-    # Connect to MongoDB
+    """
+    The function where it happens - Hamilton reference
+    """
     client = MongoClient('mongodb://localhost:27017/')
     db = client.logs
     collection = db.nginx
